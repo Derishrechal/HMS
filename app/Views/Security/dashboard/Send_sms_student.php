@@ -3,6 +3,7 @@
         <!--Bootstrap Connection-->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
 		 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <title>Send SMS</title>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.js">
         </script>
@@ -33,131 +34,37 @@
         <script src="<?=base_url()?>/assets/js/bootstrap_validation.min.js"></script>
         <script src="<?=base_url()?>/assets/js/toastr.min.js"></script>
         <script src="<?=base_url()?>/assets/js/jquery-confirm.min.js"></script>
-		<style>
-     .navbar-custom{
-    background-color: rgb(102, 0, 34);
-    height: 20%;
-}
-.imglogo{
-    position: fixed;
-    width: 5%;
-    display: none;
-}
 
-
-.navbar.scrolled{
-    height: 10%;
-    transition: 2s all ease;
-    z-index: 1;
-}
-.navbar.scrolled .proimg{
-    display: none;
-}
-.navbar.scrolled .p{
-    padding-left: 27%;
-   
-}
-.navbar.scrolled .sp{
-    display: none;
-   
-}
-.navbar.scrolled .nt{
-    display: none;
-}
-.navbar.scrolled .logoT{
-    display: none;
-    transition: 10s all ease;
-}
-.navbar.scrolled .imglogo{
-    padding-top: 10;
-    width: 55px;
-    z-index: -99;
-    position: relative;
-    display: block;
-}
-
-.p{
-    position: absolute;
-    z-index: -1;
-    padding-left: 15%;
-    padding-bottom: 5%;
-    color: white;
-    
-}
-.logoT{
-    width: 100px;
-    margin-left:90%;
-    position: absolute;
-}
-
-.nl{
-    color: white;
-    font-weight: bold;  
-   
-}
-
-.active{
-    text-decoration: underline;
-}
-
-
-
-
-
-
-
-      .dark-mode {
-        background-color: Gray;
-        color: white;
-        opacity: 0.8;
-      }
-      .dark-mode .darkbtn{
-        color:white;
-        border: 1px solid black;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(186,186,186,1) 0%, rgba(172,172,172,1) 31%, rgba(121,121,121,1) 100%);
-      }
-      .dark-mode .navbar{
-        background-color: darkgray;
-        color:white
-      }
-			.topic{
-				padding-top:12%;
-			}
-      .topic2{
-				padding-top:15%;
-			}
-
-      .topic3{
-				padding-top:6%;
-			}
-      .darkbtn{
-        background: radial-gradient(circle, rgba(186,186,186,1) 0%, rgba(181,85,85,1) 36%, rgba(102,0,34,1) 82%);
-        color:black;
-        border: 1px solid black;
-        border-radius: 50%;
-        margin-left: 430px;
-      }
-      .proimg{
-        width: 100px;
-        border-radius: 20%;
-  
-      }
-      .nt{
-      padding-top: 5%;
-      margin-left: 10%;
-      position: absolute;
-      padding-left: 5%;
-     
-    }
 			</style>
+      <style>
+       .headBG{
+            background-image: url("<?=base_url()?>/assets/images/Header/chat1.svg");
+          }
+      body{
+            background-color: white;
+                 color:black;
+        }
+         *{
+            font-family: Clip;
+          }
+        .darkbtn{
+          position: absolute;
+          margin-left: 10px;
+        }
+        .eyebtn{
+          margin-right: 10px;
+        }
+        
+         
+			</style>
+    
     </head>
     <body>
   
         <?php
           $session=session();
             
-            $userm=$_SESSION["user_ar"];
+            $userm=$_SESSION["user_id"];
            
            if($_SESSION["se_student"]==null){
             
@@ -171,76 +78,122 @@
             else{
                 $user=$_SESSION["se_student"];
             }
-             foreach ($userm as $usm){
+             foreach ($userm as $d){
             
-              
+             
         ?>
-        <nav class="navbar navbar-custom navbar-expand-lg fixed-top">
-                    <div> 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                        </button>
-                   <img src="<?=base_url()?>/assets/images/Header/logo.png" class="imglogo"> 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-                        <a class="navbar-brand" href="#"><img src="<?=base_url()?>/assets/images/Profiles/Security/<?php echo $usm['pro_pic']; }?> " class="proimg"></a>
-                        
-                        <ul class="navbar-nav p">
-                            <li class="nav-item">
-                                <h1 class="n">HOSTEL MANAGEMENT SYSTEM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="sp">WELCOME </span></h1></li>
-                        </ul>
-                        <ul class="navbar-nav nt" >
-                         
-                          <li class="nav-item">
-                            <a class="nav-link nl" href="<?=base_url()?>/Security_login"> MY PROFILE</a>
-                          </li>
+            <script>
+        //navbar
+            $(function () {
+              $(document).scroll(function () {
+                var $nav = $(".navbar");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+              });
+            }); 
+        </script>
+    
+        <div class="row headerPart">
+        <nav class="navbar navbar-custom navbar-expand-lg fixed-top" style="position:fixed;">
+        
+                  <div> 
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                      </button>
+                      
+                      <div class="row ">
+                        <div class="col-md-12 test">
+                          <div class="navbar-header headingPage" >
+                            <h1 class="navbar-brand d-none d-sm-none d-md-block texthead1" id="texthead1" >HOSTEL MANAGEMENT SYSTEM</h1> 
                             
+                            <h1 class="navbar-brand d-block d-sm-block d-md-none textheadTwo" id="texthead2" >HOSTEL MANAGEMENT SYSTEM</h1> 
+                          </div>
+                        </div>
+                      </div> 
+                      
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                    <a class="navbar-brand abrand" href="#"><img src="<?=base_url()?>/assets/images/Header/logo.png" class="proimg"></a>
+                        <div class="row" style="padding-top: 50px;">
+                        <ul class="navbar-nav nt" >
+                          <div class="col-md-3">
+                            <li class="nav-item">
+                            <a class="nav-link nl" href="<?=base_url()?>/Security_login"> MY PROFILE</a>
+                            </li>
+                          </div>
+
+                          <div class="col-md-4">
                             <li class="nav-item">
                             <a class="nav-link nl" href="<?=base_url()?>/Send_sms_student">SEND SMS TO STUDENT</a>
-                          </li>
+                            </li>
+                          </div>
+                          <div class="col">
                             <li class="nav-item">
                             <a class="nav-link nl" href="">STUDENT_ENTER_LOG</a>
-                          </li>
+                            </li>
+                          </div>
+                         
+                          <div class="col">
                             <li class="nav-item">
-                            <a class="nav-link nl" href="HOME/logout">LOGOUT</a>
-                          </li>
-                          <button class="btn btn-default darkbtn" onclick="myFunction()"><i class="fas fa-moon"></i></button>
-                        </ul>
-                  </div>
-                </div>
-                
-                
-                <img src="<?=base_url()?>/assets/images/Header/logo.png" class="logoT">
-                
+                              <a class="nav-link nl" href="HOME/logout">LOGOUT</a>
+                            </li>
+                          </div>
+                          <div class="col">
+                          </div>
+                        
+                          </ul>
+                          </div>
+                          <img src="<?=base_url()?>/assets/images/Profiles/Security/<?php echo $d['pro_pic'];  ?>"" class="logoT">
+                            </div>
         </nav>
+          <div class="container " style="padding-top:5%;padding-left:5%">
+            <div class="row" >
+              <div class="col-md-3 intro">
+              <h3 class="myRoomHead">PARCEL NORTIFICATION TO STUDENTS</h3>
+            <p>
+              Welcome to hostel management system to send sms notification to students
+            </p>
+              </div>
+              <div class="col-md-7 headBG">
+                <!--<img src="assets/images/Header/room.webp" class="imgHeader">-->
+                
+              </div>
+            </div>
+            <div class="row" style="position:absolute;top:86%;left:29%;">
+              <i class="fas fa-arrow-circle-down downBtn" type="button" onclick="functionScrollMe()"></i>
+            </div>
+          </div><br>
+          <svg xmlns="http://www.w3.org/2000/svg" class="svgBG" viewBox="0 0 1440 220" style="">
+            <path class="pathsvg" fill="#fff" fill-opacity="1" d="M0,96L80,122.7C160,149,320,203,480,186.7C640,171,800,85,960,48C1120,11,1280,21,1360,26.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+          </svg>
+          
+        </div>
+        
+        </div>
+        
+        
         
        <!-- body part ---------------------------->
       
-       <div class="container-fluid well">  
-        <div class="row"> 
-              <div class="col-md-12">
-                <h3 class="topic2"> <center>SEND MESSAGE TO STUDENT</center>  </h2>
-              </div>
-          </div>
+       
     
         
        
         <div class="row">
 
               <!-- search details of a student -->
-                      <div class="col-md-3">
-                            <h4 class="topic"> <center> <b> Search student </b></h4><br>
-                          <form action="Se_search" method="post">
-                            <input type="text" class="text-upper case" placeholder="Kumar" name="name"> Name<br><br>
-                            <input type="text" placeholder="tg410" name="tg"> TG Number<br><br>
-                            <input type="text" placeholder="0756877873" name="mobile"> Mobile number<br><br>   
-                            <input type="submit" name="search" value="search" class="btn btn-primary"> 
+                      <div class="col-md-4">
+                            <h4 class="topic">  <b> Search student </b></h4><br>
+                          <form action="Se_search" method="post" class="justify-content-center">
+                          &nbsp&nbsp&nbsp&nbsp<input type="text" class="text-upper case" placeholder="Kumar" name="name"> Name<br><br>
+                          &nbsp&nbsp&nbsp&nbsp<input type="text" placeholder="tg410" name="tg"> TG Number<br><br>
+                          &nbsp&nbsp&nbsp&nbsp<input type="text" placeholder="0756877873" name="mobile"> Mobile number<br><br>   
+                          &nbsp&nbsp&nbsp&nbsp<input type="submit" name="search" value="search" class="btn btn-primary"> 
                           </form>
-                            </center>                
+                                            
                           </div>
               <!-- student deatails -->
-                        <div class="col-md-4">
+                        <div class="col-md-4"><br><br><br>
                               <h4 class="topic3"> <center><b>Student details</b> </h4>
-                              <table border="0" class="table table-borderless table-light tbl ">
+                              <table border="0" class="table table-border table-light tbl table-hover  table-striped table-hover-shadow" >
                                 <tr>
                                   <?php foreach ($user as $us){?>
                                         <th>
@@ -290,7 +243,7 @@
                       <div class="col-md-4"><center>
                             <h4 class="topic"><b> Send message </b> </h4>
                             <form action="security_send_Message" method="post">
-                            <table class="table table-borderless table-light tbl ">
+                            <table class="table table-borderless table-light tbl table-hover table-striped">
                               <tr>
                                 <td> To </td>
                                   <td> <input type="text" name="moblieA" value="<?php echo $us["contact_no"];?>"></td>
@@ -315,6 +268,100 @@
           </div>                         
                                         
                                        
-    <?php  }?> 
+    <?php } }
+    
+    ?> 
+    <div class="footer topFooter" style="margin-top:10%;">
+            <div class="row">
+              <div class="container">
+                <div class="row">
+                <div class="col-md-4 GoogleMap">
+                <div id="map-container-google-2" class="map-container" style="height: 210px">
+             
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15869.987621536053!2d80.5419973!3d6.0635172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x717cf948bd5444ff!2sFaculty%20of%20Technology%2C%20University%20of%20Ruhuna!5e0!3m2!1sen!2slk!4v1653208480088!5m2!1sen!2slk"  frameborder="0"
+                style="border:0" allowfullscreen></iframe>
+            </div>
+                </div>
+                
+                <div class="col-md-3">
+                  <h3>About</h3>
+                  <p>This is the system for the hostel management for the faculty of technology, University of Ruhuna</p>
+                </div>
+               
+                <div class="col-md-2">
+                <h3>Useful Links</h3>
+                <div><a href="" class="link">TECMIS</a></div>
+                <div><a href="" class="link">TECLMS</a></div>
+                <div><a href="" class="link">TECWEB</a></div>
+                <div><a href="" class="link">Faculty of Technology</a></div>
+                <div><a href="" class="link">University of Ruhuna</a></div>
+                </div>
+                <div class="col-md-3">
+                <img src="<?=base_url()?>/assets/images/Header/logo.png" class="logoT">
+
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="fixedFooter">
+              FACULTY OF TECHNNOLOGY - UNIVERSITY OF RUHUNA
+          </footer>
+
+          <script>  
+               window.sr = ScrollReveal();
+            sr.reveal('.topic',{
+                duration: 1000,
+                origin: 'left',
+                distance: '50px'
+            });
+            
+            sr.reveal('.propic',{
+                duration: 1200,
+                origin: 'left',
+                distance: '50px'
+            });
+            sr.reveal('#sub',{
+                duration: 1300,
+                origin: 'top',
+                distance: '20px'
+            });
+            sr.reveal('.pwIcon',{
+                duration: 2000,
+                origin: 'left',
+                distance: '20px'
+            });
+            sr.reveal('.newDiv',{
+                duration: 1500,
+                origin: 'top',
+                distance: '20px'
+            });
+            sr.reveal('.ql',{
+                duration: 1500,
+                origin: 'left',
+                distance: '20px'
+            });
+            sr.reveal('.link1',{
+                duration: 1600,
+                origin: 'top',
+                distance: '40px'
+            });
+            sr.reveal('.link2',{
+                duration: 1900,
+                origin: 'top',
+                distance: '40px'
+            });
+            sr.reveal('.link3',{
+                duration: 2100,
+                origin: 'top',
+                distance: '40px'
+            });
+            sr.reveal('.link4',{
+                duration: 2400,
+                origin: 'top',
+                distance: '40px'
+            });
+
+            </script>
     </body>
 </html>

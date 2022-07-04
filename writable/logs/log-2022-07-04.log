@@ -1,0 +1,77 @@
+ERROR - 2022-07-04 01:35:27 --> Unknown column 'sec_id' in 'where clause'
+CRITICAL - 2022-07-04 01:35:27 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\HMS\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\HMS\app\Controllers\Home.php(68): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\HMS\system\CodeIgniter.php(832): App\Controllers\Home->check_user()
+#3 C:\xampp\htdocs\HMS\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\HMS\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\HMS\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-07-04 01:37:39 --> Undefined array key "user_ar"
+#0 C:\xampp\htdocs\HMS\app\Views\Security\dashboard\index.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 158)
+#1 C:\xampp\htdocs\HMS\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\HMS\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\HMS\system\Common.php(1089): CodeIgniter\View\View->render('security/dashbo...', Array, true)
+#4 C:\xampp\htdocs\HMS\app\Controllers\Security_Dashboard.php(13): view('security/dashbo...')
+#5 C:\xampp\htdocs\HMS\system\CodeIgniter.php(832): App\Controllers\Security_Dashboard->index()
+#6 C:\xampp\htdocs\HMS\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Security_Dashboard))
+#7 C:\xampp\htdocs\HMS\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HMS\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-04 01:38:30 --> Undefined array key "user_ar"
+#0 C:\xampp\htdocs\HMS\app\Views\Security\dashboard\index.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 158)
+#1 C:\xampp\htdocs\HMS\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\HMS\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\HMS\system\Common.php(1089): CodeIgniter\View\View->render('security/dashbo...', Array, true)
+#4 C:\xampp\htdocs\HMS\app\Controllers\Security_Dashboard.php(13): view('security/dashbo...')
+#5 C:\xampp\htdocs\HMS\system\CodeIgniter.php(832): App\Controllers\Security_Dashboard->index()
+#6 C:\xampp\htdocs\HMS\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Security_Dashboard))
+#7 C:\xampp\htdocs\HMS\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\HMS\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-07-04 01:38:38 --> Undefined variable $user_ar
+#0 C:\xampp\htdocs\HMS\app\Controllers\Home.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 66)
+#1 C:\xampp\htdocs\HMS\system\CodeIgniter.php(832): App\Controllers\Home->check_user()
+#2 C:\xampp\htdocs\HMS\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\HMS\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\HMS\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-07-04 01:44:27 --> Array to string conversion
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 312)
+#1 C:\xampp\htdocs\HMS\system\Database\Query.php(312): implode(',', Array)
+#2 C:\xampp\htdocs\HMS\system\Database\Query.php(293): CodeIgniter\Database\Query->matchNamedBinds('UPDATE `securit...', Array)
+#3 C:\xampp\htdocs\HMS\system\Database\Query.php(150): CodeIgniter\Database\Query->compileBinds()
+#4 C:\xampp\htdocs\HMS\system\Database\BaseConnection.php(598): CodeIgniter\Database\Query->getQuery()
+#5 C:\xampp\htdocs\HMS\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `securit...', Array, false)
+#6 C:\xampp\htdocs\HMS\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#7 C:\xampp\htdocs\HMS\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(NULL, Array)
+#8 C:\xampp\htdocs\HMS\system\Model.php(651): CodeIgniter\BaseModel->update(NULL, Array)
+#9 C:\xampp\htdocs\HMS\app\Controllers\Security_Dashboard.php(208): CodeIgniter\Model->update()
+#10 C:\xampp\htdocs\HMS\system\CodeIgniter.php(832): App\Controllers\Security_Dashboard->se_update_user()
+#11 C:\xampp\htdocs\HMS\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Security_Dashboard))
+#12 C:\xampp\htdocs\HMS\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\HMS\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2022-07-04 01:45:22 --> Array to string conversion
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 312)
+#1 C:\xampp\htdocs\HMS\system\Database\Query.php(312): implode(',', Array)
+#2 C:\xampp\htdocs\HMS\system\Database\Query.php(293): CodeIgniter\Database\Query->matchNamedBinds('UPDATE `securit...', Array)
+#3 C:\xampp\htdocs\HMS\system\Database\Query.php(150): CodeIgniter\Database\Query->compileBinds()
+#4 C:\xampp\htdocs\HMS\system\Database\BaseConnection.php(598): CodeIgniter\Database\Query->getQuery()
+#5 C:\xampp\htdocs\HMS\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `securit...', Array, false)
+#6 C:\xampp\htdocs\HMS\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#7 C:\xampp\htdocs\HMS\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(NULL, Array)
+#8 C:\xampp\htdocs\HMS\system\Model.php(651): CodeIgniter\BaseModel->update(NULL, Array)
+#9 C:\xampp\htdocs\HMS\app\Controllers\Security_Dashboard.php(208): CodeIgniter\Model->update()
+#10 C:\xampp\htdocs\HMS\system\CodeIgniter.php(832): App\Controllers\Security_Dashboard->se_update_user()
+#11 C:\xampp\htdocs\HMS\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Security_Dashboard))
+#12 C:\xampp\htdocs\HMS\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\HMS\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2022-07-04 01:49:26 --> Undefined variable $obj_warden
+#0 C:\xampp\htdocs\HMS\app\Controllers\security_DashboardA.php(213): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 213)
+#1 C:\xampp\htdocs\HMS\system\CodeIgniter.php(832): App\Controllers\security_DashboardA->update_user()
+#2 C:\xampp\htdocs\HMS\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\security_DashboardA))
+#3 C:\xampp\htdocs\HMS\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\HMS\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

@@ -61,18 +61,12 @@ class Home extends BaseController
                         break;
                         case 'security':
                             $user_se=null;
-                            
                             $users_id=$_POST['user'];
                             $obj_Security= new Security_model();
-
-                            $user_ar= $obj_Security->where('sec_id',$users_id)->findAll();
+                            $user_ar= $obj_Security->where('user_id',$users_id)->findAll();
                             $_SESSION["user_ar"]= $user_ar;
-                            foreach($user_ar as $d){
-                                $_SESSION["sec_id"]=$d["sec_id"];
-                            }
-                            if($_SESSION["sec_id"]!=NULL){
-                                return redirect('Security_login');
-                            }
+                            $_SESSION["user_id"]= $obj_Security->where('user_id',$users_id)->findAll();
+                            return redirect('Security_login');
                         break;
                         case 'dean':
                             $users_id=$_POST['user'];
