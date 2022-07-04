@@ -7,6 +7,6 @@
         protected $table="complaints";
         //protected $primaryKey="comp_id";
 
-        protected $allowedFields=['rec','date','time','subject','complaint'];
+        protected $allowedFields=['receiver','sender','date','time','subject','complaint'];
     }
 ?>

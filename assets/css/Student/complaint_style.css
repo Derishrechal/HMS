@@ -1,9 +1,9 @@
 .modal1-body {
-    background-color: #006666;
+    background-color: whitesmoke;
     padding:9px 15px;
     color:#000;
     font-family:Verdana, sans-serif;
-    border-bottom:4px solid #006666;
+    /* border-bottom:4px solid #006666; */
 
  }
  .modal1-header {

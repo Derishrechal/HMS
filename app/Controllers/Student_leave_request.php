@@ -26,37 +26,7 @@ class Student_leave_request extends BaseController
     public function leave_req()  
     {  
         $obj_leaveReq = new out_request_Model();
-        /*
-        $special = new out_request_Model();
-        $data = [
-            // 'request_type' => $this->request->getPost('request_type'),
-            'reg_no' => $this->request->getPost('reg_no'),
-            'name' => $this->request->getPost('name'),
-            'leave_date' => $this->request->getPost('leave_date'),
-            'leave_time' => $this->request->getPost('leave_time'),
-            // 'return_date' => $this->request->getPost('return_date'),
-            // 'return_time' => $this->request->getPost('return_time'),
-            'reason' => $this->request->getPost('reason')
-
-        ];
-        if($special->save($data)){
-        // return redirect()->to(base_url('Student/Request/Leave_request.php'))->with('status','Request Added sucessfully');
-        echo '<script>alert("Request sended sucessfuly");</script>';
-        echo view("Student/Request/Leave_request.php");
-        }
-        else{
-            echo "You request is not saved";
-        }
-        */
-    //    if($special->save($data)){
-    //        echo "Request saved";
-    //        echo view("Student/dashboard/index");
-    //    }
-    //    else{
-    //        echo "request not saved";
-    //    }
-       
-        // echo view("Student/dashboard/index");
+      
         $dateToday=date('Y-m-d');
         $output='';
         $user=$this->request->getVar('user');

@@ -757,37 +757,37 @@
                 
               });
               */
-              $('#updateDet').click(function(){
-                var user="<?= $us_id?>";
-                var Fname=document.getElementById("fname").value;
-                var Lname=document.getElementById("lname").value;
-                var mobile=document.getElementById("mobile").value;
-                var email=document.getElementById("email").value;
-                var address=document.getElementById("address").value;
-                //alert(user);
-                $.ajax({
-                url:"Subwarden_Dashboard/update_user",
+              // $('#updateDet').click(function(){
+              
+              //   var Fname=document.getElementById("fname").value;
+              //   var Lname=document.getElementById("lname").value;
+              //   var mobile=document.getElementById("mobile").value;
+              //   var email=document.getElementById("email").value;
+              //   var address=document.getElementById("address").value;
+              //   //alert(user);
+              //   $.ajax({
+              //   url:"Subwarden_Dashboard/update_user",
                 
-                type:"POST",
-                data:{
-                  user:user,
-                  Fname:Fname,
-                  Lname:Lname,
-                  mobile:mobile,
-                  email:email,
-                  address:address
+              //   type:"POST",
+              //   data:{
+              //     user:user,
+              //     Fname:Fname,
+              //     Lname:Lname,
+              //     mobile:mobile,
+              //     email:email,
+              //     address:address
                   
-                },
-                  success:function(data){
-                    //alert(data);
-                     //$('#status').html("updated");
-                  },
-                error: function (data) {
-                  alert("Something went wrong");
-                } 
+              //   },
+              //     success:function(data){
+              //       //alert(data);
+              //        //$('#status').html("updated");
+              //     },
+              //   error: function (data) {
+              //     alert("Something went wrong");
+              //   } 
                   
-                });
-              });
+              //   });
+              // });
               </script>
             
         </div>

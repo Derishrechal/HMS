@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="<?=base_url()?>/assets/css/Footer/style.css">
         <!--Bootstrap Connection-->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.js">
@@ -45,7 +46,7 @@
         background-image:url("<?=base_url()?>/assets/images/Header/profile.svg");
       }
         body{
-          background-color: blue;
+          background-color: white;
           color:black;
         }
         .darkbtn{
@@ -72,6 +73,19 @@
   margin-left:15%;
 }
 
+.tblUser{
+          background-color:rgba(255,255,255,0.001); 
+          color:white;
+        }
+        .tblUser:hover{
+          background-color:rgba(255,255,255,0.05); 
+          color:white; 
+          border-radius: 2%;
+          transition: 0.5s all ease-in-out;
+          
+          transform: scale(1.05);
+          }
+
 
 
 			</style>
@@ -86,7 +100,7 @@
            $us_id=$d['student_id'];
               
         ?>
-        <div class="row headerPart">
+         <div class="row headerPart d-none d-sm-none d-md-block">
         <nav class="navbar navbar-custom navbar-expand-lg fixed-top" style="position:fixed;">
                   <div > 
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,19 +108,19 @@
                       </button>
                       
                       <div class="row ">
-                        <div class="col-md-12 test">
-                          <div class="navbar-header headingPage" >
-                            <h1 class="navbar-brand d-none d-sm-none d-md-block texthead1" id="texthead1" >HOSTEL MANAGEMENT SYSTEM</h1> 
-                            
-                            <h1 class="navbar-brand d-block d-sm-block d-md-none textheadTwo" id="texthead2" >HOSTEL MANAGEMENT SYSTEM</h1> 
-                          </div>
-                        </div>
-                      </div> 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-                        <a class="navbar-brand abrand" href="#"><img src="<?=base_url()?>/assets/images/Header/logo.png" class="proimg"></a>
-                        <div class="row" style="padding-top: 50px;">
-                        <ul class="navbar-nav nt" >
-                          <div class="col-md-2.5">
+            <div class="col-md-12 test">
+              <div class="navbar-header headingPage" >
+                <h1 class="navbar-brand d-none d-sm-none d-md-block texthead1" id="texthead1" >HOSTEL MANAGEMENT SYSTEM</h1> 
+                <h1 class="navbar-brand d-block d-sm-block d-md-none textheadTwo" id="texthead2" >HOSTEL MANAGEMENT SYSTEM</h1> 
+              </div>
+            </div>
+          </div> 
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <a class="navbar-brand abrand" href="#"><img src="<?=base_url()?>/assets/images/Header/logo.png" class="proimg"></a>
+              <div class="row" style="padding-top: 50px;">
+              <ul class="navbar-nav nt">
+                
+                          <div class="col-md-1.5">
                             <li class="nav-item">
                               <a class="nav-link nl active" href='<?php echo base_url(); ?>/stu_dashboard'>MY PROFILE</a>
                             </li>
@@ -125,7 +139,9 @@
                           </div>
                           <div class="col">
                             <li class="nav-item">
-                            <a class="nav-link nl" href='<?php echo base_url(); ?>/register'>REGISTER</a>
+                            <!-- <a class="nav-link nl" href='<?php echo base_url(); ?>/register'>REGISTER</a> -->
+                            <a class="nav-link nl" href="" onclick="functionRegister()" data-toggle="modal" data-target="#ModalReg">REGISTER</a>
+                            
                             </li>
                           </div>
                           <div class="col">
@@ -151,6 +167,11 @@
                           </div>
                           <div class="col">
                             <li class="nav-item">
+                          <a class="nav-link nl" href=""  data-toggle="modal" data-target="#myModal">COMPLAINTS</a>
+                          </li>
+                          </div>
+                          <div class="col">
+                            <li class="nav-item">
                           <a class="nav-link nl" href=""  data-toggle="modal" data-target="#paidfees1">PAYMENT</a>
                           </li>
                           </div>
@@ -169,6 +190,7 @@
                           <button class="btn btn-default darkbtn " onclick="myFunction()"><i class="fas fa-moon moonn"></i><i class="fas fa-sun sunn"></i></button>
                               <button class="btn btn-default eyebtn" onclick="myFunctionEye()"><i class="fas fa-eye eyee"></i><i class="fas fa-eye-slash eyeeNo"></i></button>
                         </div>
+                      
           
         </nav>
     
@@ -197,10 +219,60 @@
           
         </div>
       
+
+          <!--Mobile view-->
+       <div class="d-block d-sm-block d-md-none">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+          <a class="navbar-brand" href="#" style="color:white;">HOSTEL MANAGEMENT SYSTEM</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+          <div class="collapse navbar-collapse mySet" id="navbarNavDropdown">
+
+          <div class="row">
+              <div class="col" style="width:40%"><img src="<?=base_url()?>/assets/images/Header/logo.png" style="width:55px;"></div>
+              <div class="col myHeadMob" style="width:60%">
+                <div class="row" style="padding-top:2%;">FACULTY OF TECHNOLOGY</div>
+                <div class="row" >UNIVERSITY OF RUHUNA</div>
+              </div>
+            </div>
+            <ul class="navbar-nav" style="padding-left:5%;">
+            <li class="nav-item">
+              <a class="nav-link nl" href='<?php echo base_url(); ?>/stu_dashboard' style="color:white">PROFILE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nl" href='<?php echo base_url(); ?>/leave_request' style="color:white">LEAVE REQUEST</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nl" href='<?php echo base_url(); ?>/stu_change_room_request' style="color:white">CHANGE ROOM REQUEST</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nl" href='<?php echo base_url(); ?>/stu_medical_request' style="color:white">MEDICAL REQUEST</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nl" href='<?php echo base_url(); ?>/stu_furniture_repair' style="color:white">REPAIR REQUEST</a>
+            </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color:white;font-weight:bold" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  More
+                </a>
+                <div class="dropdown-menu menuDrop" aria-labelledby="navbarDropdownMenuLink" >
+                      <a class="dropdown-item dop" href=""data-toggle="modal" data-target="#myModal">COMPLAINTS</a>
+                      <a class="dropdown-item dop" href='<?php echo base_url(); ?>/stu_chat'>CHAT</a>
+                      <a class="dropdown-item dop" href='<?php echo base_url(); ?>/stu_notice'>NOTICES</a>
+                      <a class="dropdown-item dop" href=""  data-toggle="modal" data-target="#paidfees1">PAYMENT</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        </div>
+        <!--Mobile view end-->
         
-        <button  data-toggle="modal" data-target="#myModal" id="com" title="Send Compliant">
-        <i class="fa fa-pencil-square-o" style="font-size:36px"></i>
-                </button>
+       
         <script>
           function functionScrollMe(){
             var map = document.getElementById('dataUser');
@@ -313,19 +385,21 @@
 
                               <div id="status"></div>
                               <div id="dataUser" >
+
+                              
                                
                                 
                               </div>
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <button type="button" id="changePassword" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">
-                                          CHANGE PASSWORD
-                                        </button>
-                                    </div>
-                                    <div class="col-md-4 text-right">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" id="updateBtn" data-target="#exampleModalCenter">
-                                          EDIT
-                                        </button>
+                                <div class="col-md-3" style="padding-top:5%">
+                                              <i class="fas fa-key pwIcon" style="font-size:25px;" type="button" id="changePassword" id="pwBtn" data-toggle="modal" data-target="#exampleModalCenter2"></i>
+                                            </div>
+                                  
+                                    <div class="col-md-4 text-right" style="padding-top:5%">
+                                        <i class="fa fa-pencil-square-o" style="font-size:25px;" type="button" data-toggle="modal"   id="updateBtn" data-target="#exampleModalCenter"></i>
+                                       
+                                        
+                                        
 
                                         <!-- Modal2 -->
                                         <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -651,40 +725,34 @@
             </div>
         </div>
 
-        <!-- footer -->
-        <div class="footer topFooter" style="margin-top:10%;">
-            <div class="row">
-              <div class="container">
-                <div class="row">
-                <div class="col-md-4 GoogleMap">
-                <div id="map-container-google-2" class="map-container" style="height: 210px">
-             
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15869.987621536053!2d80.5419973!3d6.0635172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x717cf948bd5444ff!2sFaculty%20of%20Technology%2C%20University%20of%20Ruhuna!5e0!3m2!1sen!2slk!4v1653208480088!5m2!1sen!2slk"  frameborder="0"
-                style="border:0" allowfullscreen></iframe>
-            </div>
-                </div>
-                
-                <div class="col-md-3">
-                  <h3>About</h3>
-                  <p>This is the system for the hostel management for the faculty of technology, University of Ruhuna</p>
-                </div>
-               
-                <div class="col-md-2">
-                <h3>Useful Links</h3>
-                <div><a href="" class="link">TECMIS</a></div>
-                <div><a href="" class="link">TECLMS</a></div>
-                <div><a href="" class="link">TECWEB</a></div>
-                <div><a href="" class="link">Faculty of Technology</a></div>
-                <div><a href="" class="link">University of Ruhuna</a></div>
-                </div>
-                <div class="col-md-3">
-                <img src="<?=base_url()?>/assets/images/Header/logo.png" class="logoT">
+     
 
-                </div>
-                </div>
+        <!-- Register -->
+        <div class="col-md-4">
+        <!-- <button class="open-button" onclick="functionRegister()" data-toggle="modal" data-target="#ModalReg">Register</button> -->
+
+            <div class="modal fade" id="ModalReg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                      <div class="modal-body" >
+                          <div class="row">
+                            <div class="col-md-12" id="regSet">
+                              </div>
+                          </div>
+                      </div>
+                    
+                  </div>
+                  </div>
               </div>
-            </div>
-          </div>
+
+
+
 
     
 <!-- complaint model -->
@@ -710,8 +778,8 @@
    <form  autocomplete="off" method="post" action="<?= base_url() ?>/Student_Complaint/com">
    <div class="modal1-body">
 
-    <select class="form-control " name="rec" id= "rec" required>
-    <option selected >Choose to send</option>
+    <select class="form-control " name="receiver" id= "receiver" required>
+    
     <option value="warden">Warden</option>
     <option value="subwarden">Sub-Warden</option>
     <option value="dean">Dean</option>
@@ -722,39 +790,15 @@
         <br>  
             </div>
    <div class="modal-footer">
-   <button name="insert" id="insert"  class="btn btn-info" style="background-color:#006666;" > Send </button>
-   <button class="btn btn-outline-info waves-effect"  style="background-color:#006666;" data-dismiss="modal">Close</button>
+   <button name="insert" id="insert"  class="btn btn-primary" > Send </button>
+   <button class="btn btn-danger"  data-dismiss="modal">Close</button>
   
    </div>
    </form>
   </div>
  </div>
 </div>
-<script>
-  // $('#insert').click(function(){
-  //   var rec=document.getElementById("rec").value;
-  //   var sub=document.getElementById("mysub").value;
-  //   var comp=document.getElementById("comp").value;
-    
-  //   $.ajax({
-  //     url:"Student_Complaint/Sendcomplaint",
-  //     type:"POST",
-  //     data:{
-  //       rec:rec,
-  //       sub:sub,
-  //       comp:comp
-  //     },
-  //      success:function(data){
-  //       alert("Complaint send sucessfully");
-  //       history.replaceState({}, null, "/index.php");
-  //      },
-  //      error:function(data){
-  //       alert("Something went to wrong");
-  //      }
-  //   });
-      
-  //});
-  </script>
+
 
 
 <!-- Emergency modal -->
@@ -905,24 +949,114 @@
                     function topFunction() {
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }
+
+                  
+                    function myRegisterFunc(x){
+                      var user=x;
+                      var selectdYr = document.getElementById('selectVal').value;
+                      $.ajax({
+                        url:"Student_register/regNew",
+                        method:"post",
+                        data:{
+                          id:user,
+                          level:selectdYr
+                        },
+                        success:function(data){
+                         // $('#regSet').html(data);
+                          alert(data);
+                        },
+                        error:function(data){
+
+                        }
+                      });
+                    }
+                    function functionRegister(){
+                      var user=<?php echo json_encode($us_id); ?>;
+                      
+                      $.ajax({
+                        url:"Student_register/getDues",
+                        method:"post",
+                        data:{
+                          id:user
+                        },
+                        success:function(data){
+                          $('#regSet').html(data);
+                         // alert(data);
+                        },
+                        error:function(data){
+
+                        }
+                      });
+                    }
                     
                     
                 </script>    
-        
+        </div>
+                  </div>
                       
-        
+          <!-- footer -->
+          <div class="footer topFooter" style="margin-top:10%;">
+            <div class="row">
+              <div class="container">
+                <div class="row">
+                <div class="col-md-4 GoogleMap">
+                <div id="map-container-google-2" class="map-container" style="height: 210px">
+             
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15869.987621536053!2d80.5419973!3d6.0635172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x717cf948bd5444ff!2sFaculty%20of%20Technology%2C%20University%20of%20Ruhuna!5e0!3m2!1sen!2slk!4v1653208480088!5m2!1sen!2slk"  frameborder="0"
+                style="border:0" allowfullscreen></iframe>
+            </div>
+                </div>
+                
+                <div class="col-md-3">
+                  <h3>About</h3>
+                  <p>This is the system for the hostel management for the faculty of technology, University of Ruhuna</p>
+                </div>
+               
+                <div class="col-md-2">
+                <h3>Useful Links</h3>
+                <div><a href="" class="link">TECMIS</a></div>
+                <div><a href="" class="link">TECLMS</a></div>
+                <div><a href="" class="link">TECWEB</a></div>
+                <div><a href="" class="link">Faculty of Technology</a></div>
+                <div><a href="" class="link">University of Ruhuna</a></div>
+                </div>
+                <div class="col-md-3">
+                <img src="<?=base_url()?>/assets/images/Header/logo.png" class="logoT">
+
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Mobile view interface footer-->
+          <footer class=" fixed-bottom d-block d-sm-block d-md-none" >
+            <div class="row footerMob" style="width:100%;">
+              <div class="col-2 myFot d-flex justify-content-center text-center" style="left:10px;">
+                <div class="tArea dashA" href="" type="button"></div></a>
+              </div>
+              <!--activeTA-->
+              <div class="col-2 myFot d-flex justify-content-center text-center" >
+                <a href='<?php echo base_url(); ?>/SubRooms'><div class="tArea roomM"></div></a>
+              </div>
+              <div class="col-2 myFot d-flex justify-content-center text-center">
+                <div class="tArea dashA" ></div>
+              </div>
+              <div class="col-2 myFot d-flex justify-content-center text-center">
+                <div class="tArea dashA" id="" ></div>
+              </div>
+              <div class="col-2 myFot d-flex justify-content-center text-center">
+                <div class="tArea dashA" id="" ></div>
+              </div>
+              <div class="col-2 myFot d-flex justify-content-center text-center">.
+              <a href='<?php echo base_url(); ?>/logout'><div class="tArea dashA"></div></a>
+                 
+              </div>
+              
+            </div>
+          </footer> 
       
         
-                          
-                
-
-
-
-
-
-
-
-
 
 
     </body>

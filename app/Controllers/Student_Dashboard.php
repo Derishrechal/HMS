@@ -25,7 +25,7 @@ class Student_Dashboard extends BaseController
         $user=$this->request->getVar('the_user');
         foreach(($result=$obj_student->where('student_id',$user)->findAll()) as $d){
             $output .='
-            <table border="0" class="table table-borderless table-light tbl" >
+            <table border="0" class="table table-borderless table-hover table-light tbl"  style="background:white;color:black;" >
                             
                             
                                 <tr>

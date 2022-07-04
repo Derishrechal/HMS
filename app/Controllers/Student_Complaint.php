@@ -36,9 +36,14 @@ class Student_Complaint extends BaseController
 
 public function com(){
 $special = new Complaints_Model();
+$date=date('Y-m-d');
+$time=date('H:i:s');
 $data = [
-    // 'request_type' => $this->request->getPost('request_type'),
-    'rec' => $this->request->getPost('rec'),
+    // 'receiver','sender','date','time','subject','complaint
+    // // 'request_type' => $this->request->getPost('request_type'),
+    'date'=>$date,
+    'time'=>$time,
+    'receiver' => $this->request->getPost('receiver'),
     'subject' => $this->request->getPost('subject'),
     'complaint' => $this->request->getPost('complaint'),
     

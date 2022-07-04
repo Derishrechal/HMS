@@ -247,6 +247,7 @@
  <button onclick="topFunction()" id="myBtn" title="Go to top">
                 <i class="fas fa-angle-up"></i>                
                 </button>
+                
                <!-- Modal Update-->
             <div class="modal fade" id="ModalReg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">

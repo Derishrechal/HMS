@@ -102,8 +102,8 @@
              foreach ($user as $d){
               
         ?>
-                       <div class="row headerPart">
-        <nav class="navbar navbar-custom navbar-expand-lg fixed-top" style="position:fixed;">
+                  <div class="row headerPart d-none d-sm-none d-md-block">
+                  <nav class="navbar navbar-custom navbar-expand-lg fixed-top" style="position:fixed;">
                   <div > 
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                           <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
@@ -212,6 +212,59 @@
           
         </div>
 
+        <!--Mobile view-->
+       <div class="d-block d-sm-block d-md-none">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+          <a class="navbar-brand" href="#" style="color:white;">HOSTEL MANAGEMENT SYSTEM</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+          <div class="collapse navbar-collapse mySet" id="navbarNavDropdown">
+
+          <div class="row">
+              <div class="col" style="width:40%"><img src="<?=base_url()?>/assets/images/Header/logo.png" style="width:55px;"></div>
+              <div class="col myHeadMob" style="width:60%">
+                <div class="row" style="padding-top:2%;">FACULTY OF TECHNOLOGY</div>
+                <div class="row" >UNIVERSITY OF RUHUNA</div>
+              </div>
+            </div>
+            <ul class="navbar-nav" style="padding-left:5%;">
+            <li class="nav-item">
+              <a class="nav-link nl" href='<?php echo base_url(); ?>/stu_dashboard' style="color:white">PROFILE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nl" href='<?php echo base_url(); ?>/leave_request' style="color:white">LEAVE REQUEST</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nl" href='<?php echo base_url(); ?>/stu_change_room_request' style="color:white">CHANGE ROOM REQUEST</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nl" href='<?php echo base_url(); ?>/stu_medical_request' style="color:white">MEDICAL REQUEST</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nl" href='<?php echo base_url(); ?>/stu_furniture_repair' style="color:white">REPAIR REQUEST</a>
+            </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color:white;font-weight:bold" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  More
+                </a>
+                <div class="dropdown-menu menuDrop" aria-labelledby="navbarDropdownMenuLink" >
+                      <a class="dropdown-item dop" href=""data-toggle="modal" data-target="#myModal">COMPLAINTS</a>
+                      <a class="dropdown-item dop" href='<?php echo base_url(); ?>/stu_chat'>CHAT</a>
+                      <a class="dropdown-item dop" href='<?php echo base_url(); ?>/stu_notice'>NOTICES</a>
+                      <a class="dropdown-item dop" href=""  data-toggle="modal" data-target="#paidfees1">PAYMENT</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        </div>
+        <!--Mobile view end-->
+
+
          <!--Bring me into top-->
  <button onclick="topFunction()" id="myBtn" title="Go to top">
                 <i class="fas fa-angle-up"></i>                
@@ -250,6 +303,15 @@
                 $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
               });
             }); 
+        </script>
+          <script>
+          function functionScrollMe(){
+            var map = document.getElementById('noticeshow');
+          //alert("s");
+            map.scrollIntoView({behavior: "smooth"});
+          }
+
+       
         </script>
         
   <script>
@@ -315,7 +377,7 @@
           }
           </script>
 
-<div class="container search-table">
+<div class="container search-table" id="noticeshow">
             <div class="search-box">
                 <div class="row">
                     <div class="col-md-3">
@@ -416,6 +478,34 @@
               </div>
             </div>
           </div>
+
+             <!--Mobile view interface footer-->
+             <footer class=" fixed-bottom d-block d-sm-block d-md-none" >
+            <div class="row footerMob" style="width:100%;">
+              <div class="col-2 myFot d-flex justify-content-center text-center" style="left:10px;">
+                <div class="tArea dashA" href="" type="button"></div></a>
+              </div>
+              <!--activeTA-->
+              <div class="col-2 myFot d-flex justify-content-center text-center" >
+                <a href='<?php echo base_url(); ?>/SubRooms'><div class="tArea roomM"></div></a>
+              </div>
+              <div class="col-2 myFot d-flex justify-content-center text-center">
+                <div class="tArea dashA" ></div>
+              </div>
+              <div class="col-2 myFot d-flex justify-content-center text-center">
+                <div class="tArea dashA" id="" ></div>
+              </div>
+              <div class="col-2 myFot d-flex justify-content-center text-center">
+                <div class="tArea dashA" id="" ></div>
+              </div>
+              <div class="col-2 myFot d-flex justify-content-center text-center">.
+              <a href='<?php echo base_url(); ?>/logout'><div class="tArea dashA"></div></a>
+                 
+              </div>
+              
+            </div>
+          </footer> 
+      
 
 
 

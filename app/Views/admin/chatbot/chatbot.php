@@ -366,17 +366,29 @@ $("#textInput").keypress(function (e) {
 
 function getBotResponse(input) {
     //rock paper scissors
-    if (input == "Am i pay hostel fees") {
-        return "yeah! you have pay to each of year 2000";
-    } else if (input == "how many years i have get hostel") {
-        return "only 2 years";
-    } else if (input == "if any emergency which person i want contact") {
-        return "sub warden";
+    if (input == "How can i communicate with a subwarden?") {
+        return "Through the chat";
+    } else if (input == "If any emergency cases how can i candact subwarden?") {
+        return "Through click on the emergency button";
+    } else if (input == "How manay years i can get the hostel?") {
+        return "Based on the hostel availablity it will be decided";
+    }
+    else if (input == "At what time hostel open & closed?") {
+        return "From 6.00 am to 8.00 pm";
+    }
+    else if (input == "How much i need to pay for each of year") {
+        return "only 2000";
+    }
+    else if (input == "If any late situation how can i enter the hostel?") {
+        return "need to communicate with a sub warden";
+    }
+    else if (input == "Can i meet my parents in hostel accommodation on time?") {
+        return "on weekend times";
     }
 
     // Simple responses
     if (input == "hello") {
-        return "Hello there!";
+        return "Hello there! how can ihelp you";
     } else if (input == "goodbye") {
         return "Talk to you later!";
     } else {

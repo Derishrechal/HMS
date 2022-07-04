@@ -128,6 +128,7 @@ public function OTP_verify() {
              if ($err) {
                 
                 echo '<script>alert("Message is not send");</script>';
+                echo view('Student/dashboard/otp_verification.php'); 
                
              } else {
                // echo '<script>alert("Message is sent");</script>';
@@ -148,7 +149,7 @@ public function verify_otp(){
         $MSISDN="0762043010";
         $SRC ="SendTest";
        
-         $MESSAGE = ( urldecode($_SESSION["registation_no"]."has".$_SESSION["emg_msg"]));
+         $MESSAGE = ( urldecode($_SESSION["registation_no"]." has ".$_SESSION["emg_msg"]));
          $AUTH = "535|O5FJnr6AaaZorvvQyFwHcAgrRiaGCeRfEtcc5U9c";  //Replace your Access Token
         
          
@@ -182,7 +183,10 @@ public function verify_otp(){
                     echo view('Student/dashboard/otp_verification.php'); 
                  } else {
                     echo '<script>alert("EMERGENCY Message sucessfully sended");</script>';
+                    // echo '<script>history.go (-1);</script>';
+                   
                     echo view('Student/dashboard/index.php');
+                    // echo '<script>location.reload ();</script>';
                  }
         
          } else{

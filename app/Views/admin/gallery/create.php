@@ -92,6 +92,12 @@ th {
 margin-right: auto;
   
 }
+.headBG{
+  background-image:url("assets/images/Header/exp.svg");
+}
+body{
+  background-color:white;
+}
 			</style>
     </head>
     <body>
@@ -110,44 +116,63 @@ margin-right: auto;
              foreach ($user as $d){
               
         ?>
-        <nav class="navbar navbar-custom navbar-expand-lg fixed-top">
-                    <div> 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                        </button>
-                   <img src="<?=base_url()?>/assets/images/Header/logo.png" class="imglogo"> 
+              <div class="row headerPart">
+        <nav class="navbar navbar-custom navbar-expand-lg fixed-top" style="position:fixed;">
+                  <div > 
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                      </button>
+                      
+                      <div class="row ">
+                        <div class="col-md-12 test">
+                          <div class="navbar-header headingPage" >
+                            <h1 class="navbar-brand d-none d-sm-none d-md-block texthead1" id="texthead1" >HOSTEL MANAGEMENT SYSTEM</h1> 
+                            
+                            <h1 class="navbar-brand d-block d-sm-block d-md-none textheadTwo" id="texthead2" >HOSTEL MANAGEMENT SYSTEM</h1> 
+                          </div>
+                        </div>
+                      </div> 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-                    <a class="navbar-brand" href="#"><img src="<?=base_url()?>/assets/images/Profiles/Admin/<?php echo $d['pro_pic']; ?>" class="proimg2"></a>
-                        
-                        <ul class="navbar-nav p">
-                            <li class="nav-item">
-                                <h1 class="n">HOSTEL MANAGEMENT SYSTEM</h1></li>
-                        </ul>
+                        <a class="navbar-brand abrand" href="#"><img src="<?=base_url()?>/assets/images/Header/logo.png" class="proimg"></a>
+                        <div class="row" style="padding-top: 50px;">
                         <ul class="navbar-nav nt" >
-                         
+                          <div class="col-md-2.5">
                           <li class="nav-item">
-                          <a class="nav-link nl " href='<?php echo base_url(); ?>/admin_login'>MY PROFILE</a>
+                            <a class="nav-link nl active" href='<?php echo base_url(); ?>/admin_login'>MY PROFILE</a>
                           </li>
-                        
+                          </div>
+                         
                           <li class="nav-item">
                             <a class="nav-link nl" href='<?php echo base_url(); ?>/d_board'>DASHBOARD</a>
                           </li>
-                            <!-- <li class="nav-item">
+                        
+                          
+                          <li class="nav-item">
                             <a class="nav-link nl" href='<?php echo base_url(); ?>/user'>USERS</a>
                           </li>
-                            <li class="nav-item">
+                          
+                          <li class="nav-item">
                             <a class="nav-link nl" href='<?php echo base_url(); ?>/notice'>NOTICES</a>
                           </li>
-                            <li class="nav-item">
-                            <a class="nav-link nl" href="">GALLERY</a>
+                         
+                          
+                          <li class="nav-item">
+                            <a class="nav-link nl" href='<?php echo base_url(); ?>/gallery'>GALLERY</a>
                           </li>
-                            <li class="nav-item">
-                            <a class="nav-link nl" href="">COMPLAINTS</a>
-                          </li> -->
-                            <li class="nav-item">
-                            <a class="nav-link nl" href="HOME/logout">LOGOUT</a>
+                         
+                          
+                          <li class="nav-item">
+                            <a class="nav-link nl" href='<?php echo base_url(); ?>/complaints'>COMPLAINTS</a>
                           </li>
-                          <li class="nav-item dropdown">
+                          
+                          
+                            <li class="nav-item">
+                              <a class="nav-link nl" href="HOME/logout">LOGOUT</a>
+                            </li>
+                          
+                          
+                        
+                            <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle nl" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             MODES
                           </a>
@@ -157,15 +182,32 @@ margin-right: auto;
                             
                           </div>
                         </li>
-                        </ul>  
-                  </div>
-                </div>
-                
-                
-                <img src="<?=base_url()?>/assets/images/Header/logo.png" class="logoT">
-                
+             </div>
+             <img src="<?=base_url()?>/assets/images/Profiles/Admin/<?php echo $d['pro_pic'];  ?>"" class="logoT">
+
+
         </nav>
-        
+          <div class="container " style="padding-top:5%;padding-left:5%">
+            <div class="row" >
+              <div class="col-md-3 intro">
+              <h3 class="myRoomHead">PROFILE</h3>
+            <p>
+              Welcome to hostel management system to manage your personal data
+            </p>
+              </div>
+              <div class="col-md-7 headBG" >
+                <!--<img src="assets/images/Header/room.webp" class="imgHeader">-->
+                
+              </div>
+            </div>
+            
+          </div><br>
+          <svg xmlns="http://www.w3.org/2000/svg" class="svgBG" viewBox="0 0 1440 200">
+            <path class="pathsvg" fill="#fff" fill-opacity="1" d="M0,96L80,122.7C160,149,320,203,480,186.7C640,171,800,85,960,48C1120,11,1280,21,1360,26.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+          
+          </svg>
+          
+        </div>
         <script>
         //navbar
             $(function () {
@@ -219,7 +261,7 @@ margin-right: auto;
                 <div class ="col-md-12">
                     <div class ="form-group mb-2">
                         <label>Image_id</label>
-                        <input type="text" name ="Image_id" id="imgid" class="form-control" required placeholder="enter image id">
+                        <input type="varchar" name ="Image_id" id="imgid" class="form-control" required placeholder="enter image id">
               </div>
               </div>
        
@@ -229,12 +271,28 @@ margin-right: auto;
                         <input type="text" name ="Image_name" id="imageName" class="form-control" required placeholder="enter image name">
               </div>
               </div>
-           
-
+           <div class ="col-md-6">
+              <div class ="form-group mb-2">
+                        <label>Date</label>
+                        <input type="date" name ="Image_name" id="imageName" class="form-control" required placeholder="enter image name">
+              </div>
+              </div>
+			  
+			<div class ="col-md-6">
+              <div class ="form-group mb-2">
+                        <label>Time</label>
+                        <input type="time" name ="Image_name" id="imageName" class="form-control" required placeholder="enter image name">
+              </div>
+              </div>
         
-                <div class ="col-md-6">
+        <div class ="col-md-6">
+              <div class ="form-group mb-2">
+                        <label>Image</label>
+                        <input type="file" name ="Image_name" id="imageName" class="form-control" required placeholder="enter image name">
+              </div>
+              </div>
         
-        
+		
                 <!-- <div class ="col-md-6">
             <div class ="form-group mb-3">
                         <label>image</label>

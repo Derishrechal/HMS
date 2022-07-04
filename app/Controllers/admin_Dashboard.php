@@ -15,10 +15,7 @@ use App\Models\Security_model;
 use App\Models\model_warden;
 use App\Models\model_subwarden;
 use App\Models\student_model;
-
-
-
-
+$session = \Config\Services::session();
 
 class admin_Dashboard extends BaseController
 {
@@ -41,19 +38,21 @@ class admin_Dashboard extends BaseController
    
     public function index()
     {
-        $session=session();
-        $id='';
-        if(session()->get("u_id")){
-            $id=session()->get("u_id");
-        }
-        //$id='wB001';
-        //$uid=$session->get('userid');
-        //$uid=$_SESSION['userid'];
-        //echo "ji";
-        $obj_admin= new admin_model();
-        //$data['user_datas']=$obj_warden->findAll();
-        $data['user_datas']= $obj_admin->where('admin_id',$id)->findAll();
-        echo view('admin/dashboard/index.php',$data);
+        // $session=session();
+        // $id='';
+        // if(session()->get("u_id")){
+        //     $id=session()->get("u_id");
+        // }
+        // //$id='wB001';
+        // //$uid=$session->get('userid');
+        // //$uid=$_SESSION['userid'];
+        // //echo "ji";
+        // $obj_admin= new admin_model();
+        // //$data['user_datas']=$obj_warden->findAll();
+        // $data['user_datas']= $obj_admin->where('admin_id',$id)->findAll();
+        // echo view('admin/dashboard/index.php');
+
+        echo view('admin/dashboard/index.php');
     }
 
     public function get_details(){
@@ -307,6 +306,8 @@ echo view("admin/users/user.php");
                         <th>email</th>  
                         <th>DOB</th> 
                         <th>Qualification</th>  
+                        <th>Action</th>  
+
                     </tr>  
                 </thead>
                 ';
@@ -324,7 +325,11 @@ echo view("admin/users/user.php");
                             <td>'.$row['email'].'</td>
                             <td>'.$row['DOB'].'</td>
                             <td>'.$row['Qualification'].'</td>
-                        </tr>
+                            
+
+                            
+                       
+                            </tr>
                     </tbody>
                     ';
                 }
@@ -344,6 +349,8 @@ echo view("admin/users/user.php");
                         <th>Date_Joined</th> 
                         <th>Qualification</th>
                         <th>pro_pic</th>  
+                        <th>Action</th>  
+
                     </tr>  
                 </thead>
                 ';
@@ -364,6 +371,8 @@ echo view("admin/users/user.php");
                             <td>'.$row['Date_Joined'].'</td>
                             <td>'.$row['Qualification'].'</td>
                             <td>'.$row['pro_pic'].'</td>
+                            <td><button class="btn btn-danger btn-sm font-size:15px" id='.$row['user_id'].' onclick="resetPasseord(this.id)">RESET_PASSWORD</button>
+                            </td>
                         </tr>
                     </tbody>
                     ';
@@ -384,6 +393,8 @@ echo view("admin/users/user.php");
                         <th>email</th>  
                         <th>DOB</th> 
                         <th>Date_Joined</th> 
+                        <th>Action</th>  
+
                         
                     </tr>  
                 </thead>
@@ -422,7 +433,9 @@ echo view("admin/users/user.php");
                         <th>contact_no</th>  
                         <th>email</th>  
                         <th>DOB</th> 
-                        <th>Date Joined</th>  
+                        <th>Date Joined</th> 
+                        <th>Action</th>  
+ 
                     </tr>  
                 </thead>
                 ';
@@ -461,6 +474,8 @@ echo view("admin/users/user.php");
                         <th>email</th>  
                         <th>department</th> 
                         <th>nic_number</th>
+                        <th>Action</th>  
+
                 
                     </tr>  
                 </thead>
