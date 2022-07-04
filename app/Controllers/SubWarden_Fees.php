@@ -11,6 +11,6 @@ class SubWarden_Fees extends BaseController
 {
     public function index()
     {
-        echo view('SubWarden/Fees/hostelfee_Detail.php');   
+        echo view('SubWarden/Complaints/complaints.php');   
     }
 }

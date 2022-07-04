@@ -122,7 +122,7 @@
              foreach ($user as $d){
               $us_id=$d['user_id'];
         ?>
-      <div class="row headerPart d-none d-sm-none d-md-block">
+          <div class="row headerPart d-none d-sm-none d-md-block">
         <nav class="navbar navbar-custom navbar-expand-lg fixed-top" style="position:fixed;">
                   <div > 
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -163,7 +163,7 @@
                          <a class="nav-link nl" href='<?php echo base_url(); ?>/SubRequests'>REQUESTS</a>
                        </li>
                        <li class="nav-item">
-                         <a class="nav-link nl" href='<?php echo base_url(); ?>/SubFees'>HOSTEL FEES</a>
+                         <a class="nav-link nl" href='<?php echo base_url(); ?>/'>HOSTEL FEES</a>
                        </li>
                          
                        <li class="nav-item">
@@ -208,7 +208,7 @@
           
         </div>
 
-      <!--Mobile view-->
+         <!--Mobile view-->
        <div class="d-block d-sm-block d-md-none">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -240,7 +240,7 @@
               <a class="nav-link nl" href='<?php echo base_url(); ?>/SubChat' style="color:white">CHATS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nl" href='<?php echo base_url(); ?>/SubFees ' style="color:white">HOSTEL FEES</a>
+              <a class="nav-link nl" href='<?php echo base_url(); ?>/' style="color:white">HOSTEL FEES</a>
             </li>
 
               <li class="nav-item dropdown">

@@ -192,7 +192,7 @@
                 <a class="nav-link nl" href='<?php echo base_url(); ?>/SubRequests'>REQUESTS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link nl" href='<?php echo base_url(); ?>/SubFees'>HOSTEL FEES</a>
+                <a class="nav-link nl" href='<?php echo base_url(); ?>/'>HOSTEL FEES</a>
               </li>
                 
               <li class="nav-item">
@@ -274,7 +274,7 @@
               <a class="nav-link nl" href='<?php echo base_url(); ?>/SubChat' style="color:white">CHATS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nl" href='<?php echo base_url(); ?>/SubFees' style="color:white">HOSTEL FEES</a>
+              <a class="nav-link nl" href='<?php echo base_url(); ?>/' style="color:white">HOSTEL FEES</a>
             </li>
 
               <li class="nav-item dropdown">

@@ -61,7 +61,6 @@ $routes->get('SubAttendance', 'SubWarden_Attendance::index');
 $routes->get('SubFees', 'SubWarden_Fees::index');
 $routes->get('SubExp', 'SubWarden_Exp::index');
 
-
 //security area
 $routes->get('Security_login', 'Security_Dashboard::index');
 $routes->get('Send_sms_student', 'Security_Dashboard::Send_sms_student');

@@ -135,7 +135,7 @@
           }
           </script>
         
-        <div class="row headerPart d-none d-sm-none d-md-block">
+        <div class="row headerPart">
         <nav class="navbar navbar-custom navbar-expand-lg fixed-top" style="position:fixed;">
         
                   <div> 
@@ -226,57 +226,6 @@
             <path class="pathsvg" fill="#fff" fill-opacity="1" d="M0,96L80,122.7C160,149,320,203,480,186.7C640,171,800,85,960,48C1120,11,1280,21,1360,26.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
           </svg>
           
-        </div>
-
-        <!--Mobile view-->
-       <div class="d-block d-sm-block d-md-none">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-          <a class="navbar-brand" href="#" style="color:white;">HOSTEL MANAGEMENT SYSTEM</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            
-          <div class="collapse navbar-collapse mySet" id="navbarNavDropdown">
-
-          <div class="row">
-              <div class="col" style="width:40%"><img src="<?=base_url()?>/assets/images/Header/logo.png" style="width:55px;"></div>
-              <div class="col myHeadMob" style="width:60%">
-                <div class="row" style="padding-top:2%;">FACULTY OF TECHNOLOGY</div>
-                <div class="row" >UNIVERSITY OF RUHUNA</div>
-              </div>
-            </div>
-            <ul class="navbar-nav" style="padding-left:5%;">
-            <li class="nav-item">
-              <a class="nav-link nl active" href='#' style="color:white">PROFILE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nl" href='<?php echo base_url(); ?>/SubRooms' style="color:white">ROOMS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nl" href='<?php echo base_url(); ?>/SubAttendance' style="color:white">ATTENDENCE</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nl" href='<?php echo base_url(); ?>/SubChat' style="color:white">CHATS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nl" href='<?php echo base_url(); ?>/' style="color:white">HOSTEL FEES</a>
-            </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color:white;font-weight:bold" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  More
-                </a>
-                <div class="dropdown-menu menuDrop" aria-labelledby="navbarDropdownMenuLink" >
-                      <a class="dropdown-item dop" href='<?php echo base_url(); ?>/SubComplaints'>COMPLAINTS</a>
-                      <a class="dropdown-item dop" href='<?php echo base_url(); ?>/SubExp'>EXPENSES</a>
-                      <a class="dropdown-item dop" href='<?php echo base_url(); ?>/SubNotices'>NOTICES</a>
-                      <a class="dropdown-item dop" href='<?php echo base_url(); ?>/SubRequests'>REQUESTS</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </nav>
         </div>
         <script>
           function functionScrollMe(){
@@ -1002,32 +951,6 @@
           <footer class="fixedFooter">
               FACULTY OF TECHNNOLOGY - UNIVERSITY OF RUHUNA
           </footer>
-          
-          <!--Mobile view interface footer-->
-          <footer class=" fixed-bottom d-block d-sm-block d-md-none" >
-            <div class="row footerMob" style="width:100%;">
-              <div class="col-2 myFot d-flex justify-content-center text-center" style="left:10px;">
-                <div class="tArea activeTA dashA" href="" type="button"></div></a>
-              </div>
-              <div class="col-2 myFot d-flex justify-content-center text-center" >
-                <a  href='<?php echo base_url(); ?>/SubRooms'><div class="tArea roomM"></div></a>
-              </div>
-              <div class="col-2 myFot d-flex justify-content-center text-center">
-                <div class="tArea dashA"  ></div>
-              </div>
-              <div class="col-2 myFot d-flex justify-content-center text-center">
-                <div class="tArea dashA" id="" ></div>
-              </div>
-              <div class="col-2 myFot d-flex justify-content-center text-center">
-                <div class="tArea dashA" id="" ></div>
-              </div>
-              <div class="col-2 myFot d-flex justify-content-center text-center">.
-              <a href='<?php echo base_url(); ?>/logout'><div class="tArea dashA"></div></a>
-                 
-              </div>
-              
-            </div>
-          </footer> 
           <script>  
                window.sr = ScrollReveal();
             sr.reveal('.topH',{
