@@ -7,6 +7,7 @@ use App\Models\boys_hostel;
 use App\Models\girls_hostel;
 use App\Models\chats_models;
 use App\Models\model_users;
+use Kint\Zval\Value;
 
 //home pages
 class Warden_Dashboard extends BaseController
@@ -176,16 +177,60 @@ class Warden_Dashboard extends BaseController
         
         
         if(isset($_POST['submit'])){
-           
-            $pname = rand(1000,10000)."-".$_FILES["file"]["name"];
-            $tname = $_FILES["file"]["tmp_name"];
-            echo $pname;
-            $uploads_dir=base_url()."/assets/images/Profile/Warden";
-            $mv=move_uploaded_file($tname,$uploads_dir.'/'.$pname);
-            if(!$mv){
-                echo "coono";
+            $obj_warden= new model_warden();
+            $file= $this->request->getFile('image');
+            $user = $this->request->getVar('user_id');
+           if($file->isValid()){
+               $imgName= $file->getRandomName();
+                //$file->move('profile/',$imgName);
+                $file->move('assets/images/Profiles/Warden/',$imgName);
+                $data=array(
+                    'pro_pic'=>$imgName
+                    
+                );
+                $re=$obj_warden->where('user_id',$user)->set($data)->update();
+                if($re){
+                    //echo "updated";
+                    //redirect('/');
+                    return redirect()->to('prof');
                 }
+                //echo $user;
+                
+            }else{
+               echo "<script>alert('Cannot update the image')</script>";
+               return redirect()->to('prof');
+            }
+            
+
         }
+    }
+    public function getProPicOfMine(){
+        $output = '';
+        $obj_warden= new model_warden();
+        $user=$this->request->getVar('user');
+        $re=$obj_warden->where('user_id',$user)->findAll();
+        foreach($re as $row){
+            $img=$row['pro_pic'];
+            $output .='
+                <img src="assets/images/Profiles/Warden/'.$img.'" class="propic">
+            ';
+            
+        }
+        return $output;
+    }
+    public function getProPicOfMineForHeader(){
+        $output = '';
+        $obj_warden= new model_warden();
+        $user=$this->request->getVar('user');
+        $re=$obj_warden->where('user_id',$user)->findAll();
+        foreach($re as $row){
+            $img=$row['pro_pic'];
+            $output .='
+                <img src="assets/images/Profiles/Warden/'.$img.'" class="logoT">
+            ';
+            
+        }
+        return $output;
     }
     public function update_user(){
         $obj_warden= new model_warden();

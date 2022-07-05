@@ -1,6 +1,15 @@
 *{
     font-family: Roboto;
 }
+.propic{
+    width:200px;
+    height: 200px;
+    border-radius:50%;
+    max-width: 200px;
+    min-width: 200px;
+    min-height: 200px;
+    max-height: 200px;
+}
 .headerPart{
 
 padding-top: 5%;
@@ -91,10 +100,20 @@ color:white;
 }
 .navbar.scrolled .logoT{
     width:55px;
+    height: 55px;
+    max-width: 55px;
+    min-width: 55px;
+    max-height: 55px;
+    min-height: 55px;
     transition: 1s all ease;
     margin-left:94%;
     margin-bottom: 2px;
     border-radius: 50%;
+}
+.navbar.scrolled .theHeaderPro{
+    position: absolute;
+    top:5%;
+    left:95%;
 }
 .navbar.scrolled{
     background-color: rgba(5,51,84,0.7);
@@ -115,9 +134,18 @@ color:white;
     color: white;
     
 }
-
+.theHeaderPro{
+    top:5%;
+    left:92%;
+    position: absolute;
+}
 .logoT{
-    width: 100px;
+    width:100px;
+    height: 100px;
+    max-width: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    min-height: 100px;
     margin-left:90%;
     position: absolute;
     border-radius: 50%;

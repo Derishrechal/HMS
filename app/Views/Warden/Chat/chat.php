@@ -49,7 +49,7 @@
           background-image: url("<?=base_url()?>/assets/images/Body/bgg.svg");
         }
         .mod{
-          background-image: url("<?=base_url()?>/assets/images/Chat/bg.webp");
+          background: rgba(0,0,0,0.9);
     
         }
         
@@ -60,9 +60,7 @@
         .eyebtn{
           margin-right: 10px;
         }
-        .newBx{
-          background-image: url("<?=base_url()?>/assets/images/Chat/chat.png");
-        }
+       
         .logoT{
           border: 2px solid white;
         }
@@ -363,7 +361,7 @@
                           $('.proImageArea'+m).html(data);
                         },
                     error: function (data) {
-                      alert("Something went wrong");
+                        alert("Something went wrong");
                     }
                     });
                     //document.getElementById("newBox").style.display = "block";
@@ -609,6 +607,7 @@
             <script>
                 //for security
                 $('.bx').click(function(){
+                    
                     id = this.id;
                     //alert(id);
                     $.ajax({
@@ -624,7 +623,7 @@
                           
                         },
                     error: function (data) {
-                      alert("Something went wrong");
+                      //alert("Something went wrong");
                     }
                       
                     });

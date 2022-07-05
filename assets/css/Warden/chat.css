@@ -35,17 +35,15 @@
  .student:hover .newBx{
     position: absolute;
     position: relative;
-   color:white;
-   
-   left:0px;
+    color:white;
+    left:0px;
    
 }
 .Dean:hover .newBx{
     position: absolute;
     position: relative;
-   color:white;
-   
-   left:0px;
+    color:white;
+    left:0px;
 }
 .newBx #userImage{
     position: absolute;
@@ -165,14 +163,14 @@
     
 }
 .sent{
-    background-color: blueviolet;
-    width: 100%;
+    background-color: rgb(8, 41, 25);
+    width: 50%;
     height:50px;
-    color:white;
+    color:rgb(255, 255, 255);
     padding-left: 10px;
     
     padding-top: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 .msg{
     padding-left: 10px;
@@ -196,7 +194,7 @@
 .timeS{
     opacity: 0.8;
     color:wheat;
-    background-color: blueviolet;
+    background-color: rgb(8, 41, 25);
     margin-left: 30px;
     padding-left:  5px;
     padding-right: 5px;

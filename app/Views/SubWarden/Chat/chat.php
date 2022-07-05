@@ -40,9 +40,7 @@
         <script src="<?=base_url()?>/assets/js/jquery-confirm.min.js"></script>
         <script type="text/javascript" src="<?=base_url()?>/assets/js/vanilla-tilt.min.js"></script>
         <style>
-            .headBG{
-            background-image: url("<?=base_url()?>/assets/images/Header/chat1.svg");
-          }
+          
           body{
             background-color: white;
                  color:black;
