@@ -167,7 +167,7 @@
                           </div>
                           <div class="col">
                             <li class="nav-item">
-                            <a class="nav-link nl"  href='<?php echo base_url(); ?>/dean_room'>ROOMS</a>
+                            <a class="nav-link nl" href='<?php echo base_url(); ?>/dean_room'>ROOMS</a>
                             </li>
                           </div>
                           <div class="col">
@@ -415,6 +415,7 @@
 
                                 <div class="row">
                                     <div class="col-md-6">
+                                        
                                     </div>
                                     <div class="col-md-4 text-right">
                                       
@@ -760,11 +761,11 @@
                
                 <div class="col-md-2">
                 <h3>Useful Links</h3>
-                <div><a href="https://paravi.ruh.ac.lk/tecmis/" class="link">TECMIS</a></div>
-                <div><a href="http://teclms.ruh.ac.lk/" class="link">TECLMS</a></div>
+                <div><a href="" class="link">TECMIS</a></div>
+                <div><a href="" class="link">TECLMS</a></div>
                 <div><a href="" class="link">TECWEB</a></div>
-                <div><a href="http://www.tec.ruh.ac.lk/" class="link">Faculty of Technology</a></div>
-                <div><a href="https://ruh.ac.lk/index.php/en/" class="link">University of Ruhuna</a></div>
+                <div><a href="" class="link">Faculty of Technology</a></div>
+                <div><a href="" class="link">University of Ruhuna</a></div>
                 </div>
                 <div class="col-md-3">
                 <img src="<?=base_url()?>/assets/images/Header/logo.png" class="logoT">
