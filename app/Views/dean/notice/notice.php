@@ -143,7 +143,7 @@
                           </div>
                           <div class="col">
                             <li class="nav-item">
-                            <a class="nav-link nl active"  href='<?php echo base_url(); ?>/dean_room'>ROOMS</a>
+                            <a class="nav-link nl "  href='<?php echo base_url(); ?>/dean_room'>ROOMS</a>
                             </li>
                           </div>
                           <div class="col">
