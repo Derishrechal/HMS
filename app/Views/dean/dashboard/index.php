@@ -201,7 +201,8 @@
                         </div>
                        
                         
-                        <img src="<?=base_url()?>/assets/images/Profiles/dean/<?php echo $d['pro_pic'];  ?>"" class="logoT">
+                        <div id="theHeaderProImage" class="theHeaderPro"> </div>
+                        <img src="<?=base_url()?>/assets/images/Profiles/dean/<?php echo $d['pro_pic'];  ?>" class="logoT">
                           <button class="btn btn-default darkbtn " onclick="myFunction()"><i class="fas fa-moon moonn"></i><i class="fas fa-sun sunn"></i></button>
                               <button class="btn btn-default eyebtn" onclick="myFunctionEye()"><i class="fas fa-eye eyee"></i><i class="fas fa-eye-slash eyeeNo"></i></button>
                         </div>
@@ -495,6 +496,8 @@
                                         </div>
                                         
                                         <script>
+                                     
+
                                           //disable
                                           $('#changePassword').click(function(){
                                             //document.getElementById("changePwd").disabled = true;
